@@ -28,21 +28,36 @@
     h2 {{ $t("message.hello") }}
 
     el-row
-      el-button Default
-      el-button(type="primary") Primary
-      el-button(type="success") Success
-      el-button(type="info") Info
-      el-button(type="warning") Warning
-      el-button(type="danger") Danger
+      el-button(
+        type="primary"
+        v-for="language in languages"
+        @click.prevent="updateLanguage(language.value)"
+        :key="language.value")
+        | {{ language.title  }}
 </template>
 
 <script>
+import { mapGetters, mapActions } from 'vuex';
+
 export default {
   name: 'HelloWorld',
+  computed: {
+    ...mapGetters({
+      languages: 'global/languages',
+    }),
+  },
   data() {
     return {
       msg: 'Welcome to Your Vue.js App',
     };
+  },
+  methods: {
+    ...mapActions({
+      setLanguage: 'global/setLanguage',
+    }),
+    updateLanguage(language) {
+      this.setLanguage(language);
+    },
   },
 };
 </script>
