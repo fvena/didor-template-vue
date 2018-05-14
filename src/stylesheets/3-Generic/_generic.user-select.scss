@@ -1,0 +1,22 @@
+/**
+ * USER SELECT
+ *
+ * Establece de forma global `user-select` como `none`.
+ */
+html {
+  //@include vendor(user-select, none);
+  outline:0;
+}
+
+* {
+
+  &,
+  &:before,
+  &:after {
+    @include vendor(user-select, none);
+    outline:0;
+    @include vendor(tap-highlight-color, rgba(0,0,0,0));
+    @include vendor(tap-highlight-color, transparent);
+  }
+
+}

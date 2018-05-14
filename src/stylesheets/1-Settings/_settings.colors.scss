@@ -1,0 +1,38 @@
+/**
+ * COLORS SETTINGS
+ */
+
+// Colores de marca
+$color-brand-map: (
+    primary: #2badc4,
+    primary-dark: #238c9e,
+    primary-light: #4bbdd1
+  )
+  !default;
+
+// Escala de grisis
+$color-gray-map: (
+    black: #000000,
+    gray0: #3b4c53,
+    gray1: #7c868b,
+    gray2: #9da6aa,
+    gray3: #cfd6da,
+    gray4: #e7ebee,
+    gray5: #f5f6f8,
+    gray6: #fafafb,
+    white: #ffffff
+  )
+  !default;
+
+// Colores para notificaciones
+$color-notify-map: (
+    success: #a2be97,
+    success-darker: #81a672,
+    info: #fac05e,
+    info-darker: #e0a53f,
+    warning: #ff715b,
+    warning-darker: #e6523c,
+    danger: #ff715b,
+    danger-darker: #e6523c
+  )
+  !default;

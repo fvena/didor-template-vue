@@ -1,0 +1,23 @@
+/**
+ * SPACES SETTINGS
+ */
+
+
+// Espacio por defecto
+$space: $base-line-height * 1rem;
+//$space: 2rem;
+
+
+// Lista de espacios
+// Se generarán clases helpers con márgenes y padding automaticamente por cada
+// item de la lista de la forma:
+// .margin-half-top
+// .padding-triple-left
+/*$spacing-map: (
+  'quarter': quarter($space),
+  'third': third($space),
+  'half': halve($space),
+  'double': double($space),
+  'triple': triple($space),
+  'quadruple': quadruple($space)
+) !default;*/

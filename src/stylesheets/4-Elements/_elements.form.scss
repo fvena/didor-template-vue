@@ -1,0 +1,87 @@
+/**
+ * FORM
+ */
+
+input,
+button,
+select,
+textarea {
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+  margin-bottom: $space;
+}
+
+label,
+textarea,
+input[type='file'] {
+  display: block;
+}
+
+label {
+  @include fontsize(theta);
+  line-height: .8rem;
+  color: gray(gray2);
+  text-transform: uppercase;
+  font-weight: font($body-type, medium);
+  margin-bottom: quarter($space);
+}
+
+input {
+  cursor: pointer;
+}
+
+input[type='text'],
+input[type='number'],
+input[type='email'],
+input[type='password'],
+input[type='search'],
+input[type='url'],
+textarea {
+  color: gray(gray0);
+  width: 100%;
+  border-radius: $border-radius;
+  border: 1px solid $border-color;
+  //background: gray(gray5);
+  @include vendor(user-select, auto !important);
+
+  &:focus {
+    border-color: brand();
+    color: brand();
+  }
+}
+
+input[type='text'],
+input[type='number'],
+input[type='email'],
+input[type='password'],
+input[type='search'],
+input[type='url'] {
+  height: double($space);
+  line-height: double($space);
+  padding: 0 halve($space);
+}
+
+textarea {
+  padding: halve($space);
+  min-height: 160px;
+}
+
+input[type='radio'],
+input[type='checkbox'] {
+  position: relative;
+  bottom: 1px;
+  margin-right: halve($space);
+  vertical-align: middle;
+}
+
+input:focus::-webkit-input-placeholder { color:transparent; }
+input:focus:-moz-placeholder { color:transparent; }
+
+input[disabled] {
+  //background-color: lighten($color-ui, 5%);
+
+  &:hover {
+    cursor: not-allowed;
+  }
+}

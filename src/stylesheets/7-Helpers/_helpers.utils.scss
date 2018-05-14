@@ -1,0 +1,217 @@
+.float-right {
+  float: right !important;
+}
+.float-left {
+  float: left !important;
+}
+.clearfix {
+  @include clearfix;
+}
+
+.text-right {
+  text-align: right !important;
+}
+.text-left {
+  text-align: left !important;
+}
+.text-center {
+  text-align: center !important;
+}
+
+.text-light {
+  font-weight: font($body-type, light);
+}
+.text-regular {
+  font-weight: font($body-type, regular);
+}
+.text-medium {
+  font-weight: font($body-type, medium);
+}
+.text-bold {
+  font-weight: font($body-type, bold);
+}
+.text-extrabold {
+  font-weight: font($body-type, extrabold);
+}
+
+.text-uppercase {
+  text-transform: uppercase !important;
+}
+.text-capitalize {
+  text-transform: capitalize !important;
+}
+.text-lowercase {
+  text-transform: lowercase !important;
+}
+
+.text-underline {
+  text-decoration: underline;
+}
+
+.text-eta {
+  @include fontsize(eta);
+}
+
+.text-theta {
+  @include fontsize(theta);
+}
+
+.nowrap {
+  white-space: nowrap;
+}
+.singleLine {
+  display: inline-block;
+  max-width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.round-image {
+  border-radius: 10px;
+  box-shadow: 0 5px 7px rgba(0,0,0,.3);
+}
+
+.round {
+  border-radius: 10px;
+}
+
+.align-top {
+  vertical-align: top !important;
+}
+.align-middle {
+  vertical-align: middle !important;
+}
+.align-bottom {
+  vertical-align: bottom !important;
+}
+
+.relative {
+  position: relative;
+}
+.absolute {
+  position: absolute;
+}
+
+.table {
+  display: table;
+  width: 100%;
+}
+
+.table__row {
+  display: table-row;
+}
+
+.table__cell {
+  display: table-cell;
+  vertical-align: middle;
+}
+
+.block {
+  display: block;
+}
+.inline-block {
+  display: inline-block;
+}
+
+.border-top {
+  border-top: 1px solid $border-color;
+}
+.border-right {
+  border-right: 1px solid $border-color;
+}
+.border-bottom {
+  border-bottom: 1px solid $border-color;
+}
+.border-left {
+  border-left: 1px solid $border-color;
+}
+
+.no-border-left {
+  border-left: 0 !important;
+}
+.no-border-right {
+  border-right: 0 !important;
+}
+.no-border-bottom {
+  border-bottom: 0 !important;
+}
+.no-border-top {
+  border-top: 0 !important;
+}
+
+.no-border {
+  border: 0 !important;
+}
+
+.no-scroll {
+  overflow-y: hidden;
+}
+
+.content-min-height {
+  min-height: calc(100vh - 9rem);
+}
+
+.width10 {
+  width: 10% !important;
+}
+.width20 {
+  width: 20% !important;
+}
+.width30 {
+  width: 30% !important;
+}
+.width40 {
+  width: 40% !important;
+}
+.width50 {
+  width: 50% !important;
+}
+.width60 {
+  width: 60% !important;
+}
+.width70 {
+  width: 70% !important;
+}
+.width80 {
+  width: 80% !important;
+}
+.width90 {
+  width: 90% !important;
+}
+.width100 {
+  width: 100% !important;
+}
+
+.center-block {
+  margin: 0 auto !important;
+}
+
+.height2x {
+  height: double($space);
+}
+
+.opacity70 {
+  opacity: 0.7 !important;
+}
+.opacity40 {
+  opacity: 0.4 !important;
+}
+
+.zIndex1000 {
+  z-index: 1000;
+}
+
+.grid {
+  @include outer-container;
+}
+.grid__col50 {
+  @include span-columns(6);
+}
+.grid__omega {
+  @include omega;
+}
+
+@include media (palm) {
+  .palm-display-inline-block { display: inline-block; }
+}

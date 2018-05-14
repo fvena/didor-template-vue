@@ -1,0 +1,19 @@
+%wrapper,
+.wrapper {
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
+  position: relative;
+}
+
+@media screen and (max-width: 1480px) {
+  .wrapper { padding: 0 $space; }
+}
+
+@include media(lap) {
+  .wrapper { padding: 0 $space; }
+}
+
+@include media(palm) {
+  .wrapper { padding: 0 halve($space); }
+}
