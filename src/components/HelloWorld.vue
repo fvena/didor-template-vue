@@ -25,6 +25,8 @@
       li
         a(href="https://github.com/vuejs/awesome-vue" target="_blank") awesome-vue
 
+    h2 {{ $t("message.hello") }}
+
     el-row
       el-button Default
       el-button(type="primary") Primary
