@@ -5,7 +5,7 @@ import getters from './getters';
 import mutations from './mutations';
 
 const state = {
-  language: Cookies.get('language') || 'es',
+  language: Cookies.get('language') || 'en',
   languages: [{
     value: 'es',
     title: 'Español',

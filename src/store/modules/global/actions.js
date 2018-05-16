@@ -7,7 +7,7 @@ const setLanguage = async ({ commit, state }, lang) => {
   if (i18n.locale !== lang) {
     // Compruebo si el idioma seleccionado
     // se encuentra entre los idiomas disponibles
-    if (state.languages.filter(language => language.value === lang)) {
+    if (state.languages.find(language => language.value === lang)) {
       // Compruebo si el idioma
       // se encuentra entre los idiomas cargados
       if (!state.loadedLanguages.includes(lang)) {

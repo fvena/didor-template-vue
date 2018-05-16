@@ -1,55 +1,19 @@
-<template lang="pug">
-  .hello
-    h1 {{ msg }}
-    h2 Essential Links
-    ul
-      li
-        a(href="https://vuejs.org" target="_blank") Core Docs
-      li
-        a(href="https://forum.vuejs.org" target="_blank") Forum
-      li
-        a(href="https://chat.vuejs.org" target="_blank") Community Chat
-      li
-        a(href="https://twitter.com/vuejs" target="_blank") Twitter
-      li
-        a(href="http://vuejs-templates.github.io/webpack/" target="_blank") Docs for This Template
-
-    h2 Ecosystem
-    ul
-      li
-        a(href="http://router.vuejs.org/" target="_blank") vue-router
-      li
-        a(href="http://vuex.vuejs.org/" target="_blank") vuex
-      li
-        a(href="http://vue-loader.vuejs.org/" target="_blank") vue-loader
-      li
-        a(href="https://github.com/vuejs/awesome-vue" target="_blank") awesome-vue
-
-    h2 {{ $t("message.hello") }}
-
-    el-row
-      el-button(
-        type="primary"
-        v-for="language in languages"
-        @click.prevent="updateLanguage(language.value)"
-        :key="language.value")
-        | {{ language.title  }}
-</template>
+<template src="./HellowWorld.pug" lang="pug"></template>
 
 <script>
 import { mapGetters, mapActions } from 'vuex';
 
 export default {
   name: 'HelloWorld',
-  computed: {
-    ...mapGetters({
-      languages: 'global/languages',
-    }),
-  },
   data() {
     return {
       msg: 'Welcome to Your Vue.js App',
     };
+  },
+  computed: {
+    ...mapGetters({
+      languages: 'global/languages',
+    }),
   },
   methods: {
     ...mapActions({
@@ -63,19 +27,4 @@ export default {
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
-<style lang="scss" scoped>
-h1, h2 {
-  font-weight: normal;
-}
-ul {
-  list-style-type: none;
-  padding: 0;
-}
-li {
-  display: inline-block;
-  margin: 0 10px;
-}
-a {
-  color: brand();
-}
-</style>
+<style src="./HelloWorld.scss" lang="scss" scoped></style>
