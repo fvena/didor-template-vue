@@ -1,20 +1,7 @@
-import Cookies from 'js-cookie';
-
-import actions from './actions';
-import getters from './getters';
-import mutations from './mutations';
-
-const state = {
-  language: Cookies.get('language') || 'en',
-  languages: [{
-    value: 'es',
-    title: 'Español',
-  }, {
-    value: 'en',
-    title: 'English',
-  }],
-  loadedLanguages: [],
-};
+import state from './global.state';
+import actions from './global.actions';
+import getters from './global.getters';
+import mutations from './global.mutations';
 
 export default {
   namespaced: true,
